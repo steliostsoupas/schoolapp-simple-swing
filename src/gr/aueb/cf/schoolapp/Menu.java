@@ -29,8 +29,8 @@ public class Menu extends JFrame {
 			public void windowOpened(WindowEvent e) {
 				
 				String username = "schooldbuser";
-				String password = "12345678";
-				String url = "jdbc:mysql://localhost:3306/schooldb?serverTimezone=UTC";
+				String password = System.getenv("SCHOOL_DB_USER_PASSWD");
+				String url = "jdbc:mysql://localhost:3306/schoolDB?serverTimezone=UTC";
 				
 				try {
 					
